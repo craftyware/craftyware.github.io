@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "clean": "rimraf docs",
     "dev": "next dev",
-    "build": "yarn clean && next build",
+    "build": "yarn build:clean && next build && yarn build:nojekyll-for-github-pages",
     "preview": "serve build",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:clean": "rimraf docs",
+    "build:nojekyll-for-github-pages": "touch docs/.nojekyll"
+
   },
   "dependencies": {
     "next": "14.2.11",
@@ -22,6 +24,7 @@
     "eslint-config-next": "14.2.11",
     "rimraf": "^6.0.1",
     "serve": "^14.2.3",
+    "touch-cli": "^0.0.1",
     "typescript": "^5"
   }
 }
