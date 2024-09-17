@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "yarn build:clean && next build && yarn build:nojekyll-for-github-pages",
-    "preview": "serve build",
+    "preview": "serve docs",
     "lint": "next lint",
     "build:clean": "rimraf docs",
     "build:nojekyll-for-github-pages": "touch docs/.nojekyll"
